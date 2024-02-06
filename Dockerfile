@@ -16,7 +16,7 @@ WORKDIR /home/nodejs/app
 
 # set default node env
 ARG NODE_ENV=PROD
-ARG PORT=3000
+ARG PORT=4010
 
 # ARG NODE_ENV=production
 # to be able to run tests (for example in CI), do not set production as environment
@@ -44,7 +44,7 @@ COPY --chown=nodejs:nodejs . .
 # COPY --from=builder /dist /dist
 
 # exposed port/s
-EXPOSE 3000
+EXPOSE 4010
 
 # add an healthcheck, useful
 # healthcheck with curl, but not recommended
