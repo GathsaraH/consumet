@@ -62,7 +62,7 @@ jobs:
             docker rm ${{ secrets.DOCKER_TAG }} || true
 
             # Run the new container
-            docker run -d --name ${{ secrets.DOCKER_TAG }} -p 5601:5601 ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_TAG }}:latest
+            docker run -d --name ${{ secrets.DOCKER_TAG }} -p 4010:4010 ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_TAG }}:latest
 
             # Check NGINX configuration
             sudo nginx -t
